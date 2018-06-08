@@ -1,0 +1,24 @@
+{
+  "name": "ubuybuybuy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx backpack dev",
+    "build": "env NODE_ENV=production npx backpack build",
+    "predeploy": "yarn run build",
+    "deploy": "sls deploy"
+  },
+  "dependencies": {
+    "bottender": "^0.14.34",
+    "bottender-lambda": "^0.0.2",
+    "debug": "^3.1.0",
+    "luis-sdk": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "backpack-core": "^0.7.0",
+    "dotenv-webpack": "^1.5.7",
+    "nodemon": "^1.17.5"
+  }
+}

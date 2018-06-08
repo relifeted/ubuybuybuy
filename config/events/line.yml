@@ -1,0 +1,7 @@
+- http:
+    method: post
+    path: /line
+    integration: lambda
+    cors: true
+    request:
+      passThrough: WHEN_NO_MATCH

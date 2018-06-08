@@ -1,0 +1,31 @@
+
+service: ubuybuybuy
+
+custom:
+  defaultStage: dev
+  vars: ${file(./config/env.yml)}
+  line: ${file(./config/events/line.yml)}
+  defaultRole: ${file(./config/defaultRole.yml)}
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  profile: relifeted
+  region: us-west-2
+  role: defaultRole
+  deploymentBucket: relifeted.info-deployments-us-west-2
+
+package:
+  excludeDevDependencies: false
+
+functions:
+  line:
+    handler: build/main.line
+    memorySize: 1536
+    timeout: 30
+    environment:
+    events: ${self:custom.line}
+
+resources:
+  Resources:
+    defaultRole: ${self:custom.defaultRole}
