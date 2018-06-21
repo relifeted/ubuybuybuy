@@ -16,7 +16,11 @@ const pantherHeadImages = [
   'https://s3-us-west-2.amazonaws.com/ubuybuybuy-us-west-2/panther_head_6.jpg',
 ]
 
-const desireBallmages = ['https://s3-us-west-2.amazonaws.com/ubuybuybuy-us-west-2/desire_ball.jpg']
+const desireBallmages = [
+  'https://s3-us-west-2.amazonaws.com/ubuybuybuy-us-west-2/desire_ball.jpg',
+  'https://s3-us-west-2.amazonaws.com/ubuybuybuy-us-west-2/desire_ball_2.png',
+  'https://s3-us-west-2.amazonaws.com/ubuybuybuy-us-west-2/desire_ball_3.jpg'
+]
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max))
