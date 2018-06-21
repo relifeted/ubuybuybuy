@@ -16,6 +16,8 @@ const pantherHeadImages = [
   'https://s3-us-west-2.amazonaws.com/ubuybuybuy-us-west-2/panther_head_6.jpg',
 ]
 
+const desireBallmages = ['https://s3-us-west-2.amazonaws.com/ubuybuybuy-us-west-2/desire_ball.jpg']
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max))
 }
@@ -31,6 +33,10 @@ export default async function handler(context, next) {
     const index = getRandomInt(pantherHeadImages.length)
     console.log('index:', index)
     image = pantherHeadImages[index]
+  } else if (context.intent && context.intent === 'support desire ball') {
+    const index = getRandomInt(desireBallmages.length)
+    console.log('index:', index)
+    image = desireBallmages[index]
   }
   console.log('image:', image)
   if (image) {
