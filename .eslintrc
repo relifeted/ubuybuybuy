@@ -1,0 +1,32 @@
+extends: airbnb-base
+plugins:
+- import
+- jest
+env:
+  browser: true
+  node: true
+  amd: true
+  jquery: true
+  es6: true
+  mocha: true
+  "jest/globals": true
+parser: babel-eslint
+rules:
+  arrow-parens: ["off"]
+  function-paren-newline: ["off"]
+  linebreak-style: ["error", "unix"]
+  semi: ["error", "never"]
+  no-param-reassign: ["error", {"props": true}]
+  comma-dangle: ["warn", "always-multiline"]
+  max-len: ["warn", 100, 4, {"ignoreUrls": true, "ignoreComments": true}]
+  no-plusplus: ["warn"]
+  global-require: ["warn"]
+  import/no-unresolved: ["warn"]
+  import/no-named-as-default: ["warn"]
+  import/extensions: ["off"]
+  import/prefer-default-export: ["off"]
+  import/no-extraneous-dependencies: ["error", {"devDependencies": true}]
+  class-methods-use-this: ["off"]
+settings: 
+  import/resolver:
+    babel-module:
