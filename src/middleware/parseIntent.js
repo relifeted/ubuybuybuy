@@ -31,11 +31,11 @@ export default async function handler(context, next) {
     case "樓下支援剁剁剁":
     case "樓下支援買了啦":
     case "樓下支援勸敗":
-    case "Ted黑白買":
-    case "Richard黑白買":
+    case "Ted 黑白買":
+    case "Richard 黑白買":
     case "串哥黑白買":
     case "雪兜黑白買":
-    case "Summer黑白買":
+    case "Summer 黑白買":
       context.intent = "support buybuybuy"
       break;
     case "支援開司":
