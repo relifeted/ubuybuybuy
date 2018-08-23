@@ -1,11 +1,11 @@
-import LUISClient from 'luis-sdk'
+// import LUISClient from 'luis-sdk'
 
-const luis = new LUISClient({
-  domain: process.env.LUIS_DOMAIN,
-  appId: process.env.LUIS_APP_ID,
-  appKey: process.env.LUIS_APP_KEY,
-  verbose: true,
-})
+// const luis = new LUISClient({
+//   domain: process.env.LUIS_DOMAIN,
+//   appId: process.env.LUIS_APP_ID,
+//   appKey: process.env.LUIS_APP_KEY,
+//   verbose: true,
+// })
 
 export default async function handler(context, next) {
   const { text = '' } = context.event
