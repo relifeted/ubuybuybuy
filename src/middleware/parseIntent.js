@@ -21,6 +21,12 @@ export default async function handler(context, next) {
   //   context.intent = response.topScoringIntent.intent
   // }
   switch (text) {
+    case "買買買":
+    case "剁手":
+    case "剁剁剁":
+    case "剁手了啦":
+    case "買了啦":
+    case "敗了啦":
     case "支援買買買":
     case "支援剁手":
     case "支援剁剁剁":
@@ -38,6 +44,9 @@ export default async function handler(context, next) {
     case "Summer 黑白買":
       context.intent = "support buybuybuy"
       break;
+    case "開司":
+    case "給開司一罐啤酒":
+    case "給開司一罐":
     case "支援開司":
     case "支援給開司一罐啤酒":
     case "支援給開司一罐":
@@ -46,11 +55,16 @@ export default async function handler(context, next) {
     case "樓下支援給開司一罐":
       context.intent = "support desire ball"
       break;
+    case "浪味仙":
     case "支援浪味仙":
     case "樓下支援浪味仙":
     case "樓下支援給雪兜一包浪味仙":
       context.intent = "support lonely god"
       break;
+    case "豹頭":
+    case "全都要":
+    case "全部都要":
+    case "全要":
     case "支援豹頭":
     case "支援全都要":
     case "支援全部都要":
